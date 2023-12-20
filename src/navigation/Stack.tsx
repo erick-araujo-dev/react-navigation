@@ -9,17 +9,17 @@ const Stack = createNativeStackNavigator()
 export default () => {
     return (
         <Stack.Navigator initialRouteName='Tela1'>
-            <Stack.Screen name='Tela1' options={{title: "Home"}}>
+            <Stack.Screen name='Tela1' options={{title: "Home", headerShown: false}}>
                 {props => <PassoStack {...props} avancar='Tela2'>
                     <Tela1/>
                 </PassoStack>}
             </Stack.Screen>
-            <Stack.Screen name='Tela2' options={{title: "Menu"}}>
+            <Stack.Screen name='Tela2' options={{title: "Menu", headerShown: false}}>
                 {props => <PassoStack {...props} avancar='Tela3' voltar avancarParams={{numero: 20}}>
                     <Tela2/>
                 </PassoStack>}
             </Stack.Screen>
-            <Stack.Screen name='Tela3' options={{title: "Menu"}}>
+            <Stack.Screen name='Tela3' options={{title: "Menu", headerShown: false}}>
                 {props => <PassoStack {...props} avancar='Tela3' voltar >
                     <Tela3 {...props}/>
                 </PassoStack>}
